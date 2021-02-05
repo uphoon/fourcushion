@@ -1,13 +1,19 @@
 # Site settings
-title: Starter Template for Jekyll
-email: youremail@yourdomain.net
-description: Built using Filament Group's Load CSS and Load JS and http://jch.penibelst.de/'s html compressor for optimising speed.
+title: Marz Training Center
+email: uphoon@gmail.com
+description: The site is for Crossfit Marz training center in Daegu, Korea.
 type: website
-image: /assets/imgs/octojekyll.jpg
-host: 0.0.0.0
+image: assets/imgs/octojekyll.jpg
+host: 127.0.0.1
 
 # Server Config options
 # livereload: true
+
+# Build settings
+markdown: kramdown
+theme: minima
+# plugins:
+#   - jekyll-feed
 
 # SASS
 sass:
@@ -15,15 +21,131 @@ sass:
   style: compressed
 
 team:
-  - name: Kjin 
-    img: /assets/imgs/team/pexels-photo-91227.jpeg
+  - name: 김진형 
+    img: assets/imgs/team/pexels-photo-91227.jpeg
     position: CEO & Coach
     bio: "I'm not a real person. Well, I am but I'm not Bob Smith, CEO of this random site. This picture is from Pexel."
   - name: 박상욱
-    img: /assets/imgs/team/pexels-photo-324658.jpeg
+    img: assets/imgs/team/pexels-photo-324658.jpeg
     position: Coach & Pysical Therapist
     bio: My bio is the longest. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
   - name: 김병준
-    img: /assets/imgs/team/pexels-photo-450271.jpeg
+    img: assets/imgs/team/pexels-photo-450271.jpeg
     position: Coach
     bio: Look at me smile hahahaha. I like to design pretty things or some other info about me and what I do at this company or startup.
+
+
+
+
+
+#
+# This file contains configuration flags to customize your site
+#
+
+# Name of your site (displayed in the header)
+name: Yi Sanghoon
+
+# Short bio or description (displayed in the header)
+#description: Java Developer from your mind
+
+#
+# Flags below are optional
+#
+
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+
+
+# Tabs in header. There are 'Blog', 'About', 'Archive', 'Tags'
+# and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
+# it from the list(Delete '- name: ' and 'url: ', too!)
+navigation:
+  - name: Blog
+    url: /
+  - name: About
+    url: /about
+  - name: Archive
+    url: /archive
+  - name: Tags
+    url: /tags
+  - name: Theme
+    url: https://github.com/AWEEKJ/kiko-now
+
+# Pagination
+paginate: 5
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  behance: # https://www.behance.net/<username>
+  dribbble:
+  email:
+  facebook:
+  flickr:
+  github: 
+  googleplus: # anything in your profile username that comes after plus.google.com/
+  instagram: marztraining
+  linkedin:
+  pinterest:
+  rss: # just type anything here for a working RSS icon
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  tumblr: # https://<username>.tumblr.com
+  twitter: 
+  youtube: # channel/<your_long_string> or user/<user-name>
+
+# Text under the icons in footer
+footer-text: © 2019 Marz Training Center
+
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus: # <username>.disqus.com
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics:
+
+# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
+# Used for Sitemap.xml and your RSS feed
+url:
+
+# If you're hosting your site at a Project repository on GitHub pages
+# (http://yourusername.github.io/repository-name)
+# and NOT your User repository (http://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+baseurl: /crossfit-marz
+
+#
+# !! You don't need to change any of the configuration flags below !!
+#
+
+permalink: /:title/
+paginate_path: /wod/page:num/
+
+# The release of Jekyll Now that you're using
+version: v1.2.0
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Set the Sass partials directory, as we're using @imports
+#sass:
+#  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
+plugins:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-paginate
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

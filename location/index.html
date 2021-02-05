@@ -1,0 +1,66 @@
+---
+layout: default
+title: Location
+permalink: /location/
+---
+
+<style> 
+.map_wrap {position:relative;overflow:hidden;width:100%;height:100%;}
+.radius_border{border:1px solid #919191;border-radius:5px;}     
+.photoPanal {position:absolute;top:10px;left:10px;overflow:hidden;width:320px;height:91%;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+.custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
+.custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}       
+.custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
+.custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}    
+.custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
+.custom_typecontrol .selected_btn:hover {color:#fff;}   
+.custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;} 
+.custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}     
+.custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}             
+.custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}            
+</style>
+
+<div class="map_wrap">
+  <div id="kakaomap" style="display: block;width:100%;height:700px;margin-top: 10px;margin-bottom: 50px;"></div>
+
+  <div class="photoPanalx radius_borderx">
+  </div>
+</div>
+
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a8c0a876a62ae1aae0ca833f16586d62"></script>
+<script>
+  var container = document.getElementById('kakaomap');
+  var options = {
+    center: new kakao.maps.LatLng(35.889191, 128.591492),
+    level: 3
+  };
+
+  var map = new kakao.maps.Map(container, options);
+  
+    
+  
+  var mapTypeControl = new kakao.maps.MapTypeControl();
+  map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+
+  var markerPosition  = new kakao.maps.LatLng(35.889191, 128.591492); 
+  var marker = new kakao.maps.Marker({
+      position: markerPosition
+  });
+
+
+  marker.setMap(map);
+  
+  
+  var infowindow = new kakao.maps.InfoWindow({
+      map: map,
+      position : new kakao.maps.LatLng(35.889491, 128.591492), 
+      content : '<div style="padding:10px;font-size:12px; font-weight:bold; text-align:center"><img src="https://live.staticflickr.com/65535/48493438322_c1db37d11c_s.jpg" width="32" height="32"/> <br> Marz Training-Center <br> +82 053-354-3298 </div>',
+      removable : false
+  });
+  
+  infowindow.open(map, marker);
+  
+  
+</script>

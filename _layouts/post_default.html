@@ -1,0 +1,33 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="utf-8">
+
+{% include post_head.html %}
+
+{% include priority-css.html %}
+
+<body>
+
+  {% include navbar.html %}
+  
+  <br><br><br><br><br>
+  
+  <div id="main" role="main" class="container">
+    {{ content }}
+    {% include loadJS.html %}
+  </div>
+
+  <div class="wrapper-footer">
+    <div class="container">
+      <footer class="footer">
+        {% include post_footer.html %}
+      </footer>
+    </div>
+  </div>
+
+  {% include analytics.html %}
+</body>
+
+</html>
