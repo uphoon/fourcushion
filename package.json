@@ -1,7 +1,8 @@
 {
-  "title": "node",
-  "name": "",
+  "title": "jekyll",
+  "name": "githubfourcushion",
   "version": "0.0.1",
-  "description": "",
-  "private": true
+  "description": "FOURCUSHION  is for uphoon's company",
+  "private": true,
+  "keywords": []
 }
