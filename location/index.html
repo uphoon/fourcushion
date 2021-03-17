@@ -1,10 +1,15 @@
 ---
-layout: default
+layout: full
 title: Location
 permalink: /location/
 ---
 
 <style> 
+body, html {
+  height : 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .map_wrap {position:relative;overflow:hidden;width:100%;height:100%;}
 .radius_border{border:1px solid #919191;border-radius:5px;}     
 .photoPanal {position:absolute;top:10px;left:10px;overflow:hidden;width:320px;height:91%;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
@@ -21,7 +26,7 @@ permalink: /location/
 </style>
 
 <div class="map_wrap">
-  <div id="kakaomap" style="display: block;width:100%;height:700px;margin-top: 10px;margin-bottom: 50px;"></div>
+  <div id="kakaomap" style="display: block;width:100%;height:100%;"></div>
 
   <div class="photoPanalx radius_borderx">
   </div>
@@ -32,7 +37,7 @@ permalink: /location/
 <script>
   var container = document.getElementById('kakaomap');
   var options = {
-    center: new kakao.maps.LatLng(35.889191, 128.591492),
+    center: new kakao.maps.LatLng(35.9020584649448, 128.6066761699254),
     level: 3
   };
 
@@ -44,7 +49,7 @@ permalink: /location/
   map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
 
-  var markerPosition  = new kakao.maps.LatLng(35.889191, 128.591492); 
+  var markerPosition  = new kakao.maps.LatLng(35.9020584649448, 128.6066761699254); 
   var marker = new kakao.maps.Marker({
       position: markerPosition
   });
@@ -55,8 +60,15 @@ permalink: /location/
   
   var infowindow = new kakao.maps.InfoWindow({
       map: map,
-      position : new kakao.maps.LatLng(35.889491, 128.591492), 
-      content : '<div style="padding:10px;font-size:12px; font-weight:bold; text-align:center"><img src="https://live.staticflickr.com/65535/48493438322_c1db37d11c_s.jpg" width="32" height="32"/> <br> Marz Training-Center <br> +82 053-354-3298 </div>',
+      position : new kakao.maps.LatLng(35.9020584649448, 128.6066761699254), 
+      content : `
+                      <div style="padding:10px;font-size:12px; font-weight:bold; text-align:center">
+                        <img src="{{site.baseurl}}/images/logo/logo.png" width="32" height="32"/> 
+                        <br> uphoon@gmail.com
+                        <br> 대구광역시 북구 동북로 117 소프트웨어벤처타워 15F .
+                      </div>
+                      
+                      `,
       removable : false
   });
   
