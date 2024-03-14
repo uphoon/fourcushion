@@ -1,5 +1,6 @@
 ---
 layout: post_default
+title: hsprivacy
 ---
 
 
