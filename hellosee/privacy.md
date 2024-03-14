@@ -4,7 +4,7 @@ permalink: /privacy/
 ---
 
 
-# hellsee 개인정보 처리 방침
+# hellosee 개인정보 처리 방침
 
 **1. 개인정보의 처리 및 수집에 관한 정책**
 
